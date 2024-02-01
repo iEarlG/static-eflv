@@ -1,9 +1,9 @@
-import { ThemeToggle } from "./ThemeToggle";
+import { ModeToggle } from "./ModeToggle";
 
 export const Header = () => {
     return (
         <header>
-            <ThemeToggle />
+            <ModeToggle />
         </header>
     );
 }
