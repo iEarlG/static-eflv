@@ -1,3 +1,5 @@
+"use client"
+
 import { ModeToggle } from "./ModeToggle";
 
 export const Header = () => {
