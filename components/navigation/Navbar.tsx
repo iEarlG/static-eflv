@@ -1,5 +1,6 @@
 
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -43,6 +44,9 @@ export const Navbar = ({
                         href={link.path}
                         key={i}
                     >
+                        {link.path === pathname && (
+                            <motion.span />
+                        )}
                         {link.name}
                     </Link>
                 );
