@@ -13,19 +13,19 @@ interface NavbarProps {
 
 const links = [
     {
-        name: "Home",
+        name: "home",
         path: "/",
     },
     {
-        name: "About",
+        name: "about",
         path: "/about",
     },
     {
-        name: "Projects",
+        name: "projects",
         path: "/projects",
     },
     {
-        name: "Contact",
+        name: "contact",
         path: "/contact",
     },
 ]
@@ -43,9 +43,16 @@ export const Navbar = ({
                     <Link 
                         href={link.path}
                         key={i}
+                        className={linkStyles}
                     >
                         {link.path === pathname && (
-                            <motion.span />
+                            <motion.span 
+                                initial={{ y: "-100%" }}
+                                animate={{ y: 0 }}
+                                transition={{type: "tween", }}
+                                layoutId="underline"
+                                className={underLineStyle}
+                            />
                         )}
                         {link.name}
                     </Link>
