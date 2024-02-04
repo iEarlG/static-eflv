@@ -1,8 +1,23 @@
+import Image from "next/image";
+import Link from "next/link";
 
 export const Logo = () => {
     return (
-        <div>
-            <h1>Logo</h1>
-        </div>
+        <Link href="/">
+            <Image
+                src="/logo.png"
+                alt="Logo"
+                width={84}
+                height={84}
+                className="object-contain dark:hidden"
+            />
+            <Image
+                src="/white-eflv.png"
+                alt="Logo"
+                width={84}
+                height={84}
+                className="object-contain hidden dark:block"
+            />
+        </Link>
     );
 }
