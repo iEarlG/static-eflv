@@ -62,3 +62,7 @@ html, body,
     @apply bg-background text-foreground;
   }
 }
+
+.h2-header {
+  @apply text-5xl xl:text-[69px] xl:leading-[79px] font-bold tracking-[-2px];
+}

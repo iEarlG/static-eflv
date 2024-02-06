@@ -23,8 +23,8 @@ export const Header = () => {
       }, []);
 
     return (
-        <header className={cn("sticky top-0 z-30 transition-all",
-            isHeader ? "py-4 bg-white shadow-lg dark:shadow-md dark:bg-background dark:shadow-white/35" : "py-6 dark:bg-transparent"
+        <header className={cn("sticky top-0 z-30 transition-all bg-[#FCFCFC]",
+            isHeader ? "py-4 shadow-lg dark:shadow-md dark:bg-background dark:shadow-white/35" : "py-6 dark:bg-transparent"
         )}>
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
