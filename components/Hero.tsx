@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, Download, Send, ChevronDown} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { Socials } from "@/components/Socials";
 
 export const Hero = () => {
     return ( 
@@ -28,6 +29,7 @@ export const Hero = () => {
                                 <Download size={18} />
                             </Button>
                         </div>
+                        <Socials />
                     </div>
                     <div className="hidden xl:flex relative">
                         Image
