@@ -17,7 +17,7 @@ export const Hero = () => {
                             A brief description with insights into myself, my experience, <br /> and 
                             what I do professionally.
                         </p>
-                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0">
+                        <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                             <Link href="/contact">
                                 <Button className="gap-x-2">
                                     Contact me
@@ -29,7 +29,10 @@ export const Hero = () => {
                                 <Download size={18} />
                             </Button>
                         </div>
-                        <Socials />
+                        <Socials 
+                            containerStyles="flex gap-x-6 mx-auto xl:mx-0"
+                            iconStyles="text-foreground text-[22px] hover:text-primary transition-all"
+                        />
                     </div>
                     <div className="hidden xl:flex relative">
                         Image
