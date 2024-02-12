@@ -38,8 +38,8 @@ export const Hero = () => {
                     <div className="hidden xl:flex relative">
                         <div className="bg-hero_shape3 dark:bg-hero_shape2 w-[500px] h-[500px] absolute bg-no-repeat -top-1 -right-2" />
                         <DeveloperImg 
-                            imgSrc="/.png"
-                            containerStyles="bg-hero_shape w-[510px] h-[462px] relative bg-bottom"
+                            imgSrc="/eflv.png"
+                            containerStyles="bg-hero_shape w-[510px] h-[462px] relative bg-bottom bg-no-repeat"
                         />
                     </div>
                 </div>
