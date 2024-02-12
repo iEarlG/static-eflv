@@ -4,6 +4,7 @@ import { ArrowDown, Download, Send, ChevronDown} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Socials } from "@/components/Socials";
+import { DeveloperImg } from "@/components/DeveloperImg";
 
 export const Hero = () => {
     return ( 
@@ -35,7 +36,11 @@ export const Hero = () => {
                         />
                     </div>
                     <div className="hidden xl:flex relative">
-                        Image
+                        <div className="bg-hero_shape3 dark:bg-hero_shape2 w-[500px] h-[500px] absolute bg-no-repeat -top-1 -right-2" />
+                        <DeveloperImg 
+                            imgSrc="/.png"
+                            containerStyles="bg-hero_shape w-[510px] h-[462px] relative bg-bottom"
+                        />
                     </div>
                 </div>
                 <div className="absolute hidden md:flex left-2/4 bottom-44 xl:bottom-12 animate-bounce">
