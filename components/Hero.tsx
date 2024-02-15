@@ -1,10 +1,15 @@
 
 import Link from "next/link";
-import { ArrowDown, Download, Send, ChevronDown} from "lucide-react";
+import { Download, Send, ChevronDown} from "lucide-react";
+import { FaBriefcase } from "react-icons/fa";
+import { SiFreelancer } from "react-icons/si";
+import { BiSolidNotepad } from "react-icons/bi";
 
 import { Button } from "@/components/ui/button";
 import { Socials } from "@/components/Socials";
 import { DeveloperImg } from "@/components/DeveloperImg";
+import { DevBadge } from "@/components/DevBadge";
+
 
 export const Hero = () => {
     return ( 
@@ -36,6 +41,25 @@ export const Hero = () => {
                         />
                     </div>
                     <div className="hidden xl:flex relative">
+                        <DevBadge 
+                            count={1}
+                            label="Years of Experience"
+                            icon={<FaBriefcase />}
+                            containerStyles="absolute top-[24%] -left-[5rem]"
+                        />
+                        <DevBadge 
+                            count={4}
+                            label="Years of Freelancer"
+                            icon={<SiFreelancer />}
+                            containerStyles="absolute top-[54%] -right-14"
+                        />
+                        <DevBadge 
+                            count={20}
+                            endcountText="+"
+                            label="Finished Projects"
+                            icon={<BiSolidNotepad />}
+                            containerStyles="absolute top-[82%] -left-[2rem]"
+                        />
                         <div className="bg-hero_shape3 dark:bg-hero_shape2 w-[500px] h-[500px] absolute bg-no-repeat -top-1 -right-2" />
                         <DeveloperImg 
                             imgSrc="/eflv.png"
