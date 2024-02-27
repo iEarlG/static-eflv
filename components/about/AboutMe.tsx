@@ -102,6 +102,15 @@ export const AboutMe = () => {
         <section className="xl:h-[860px] pb-12 xl:py-24">
             <div className="container mx-auto">
                 <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2>
+                <div>
+
+                    <div>
+                        <DeveloperImg 
+                            imgSrc="/eflv.png"
+                            containerStyles="relative bg-about_light dark:bg-about_dark w-[505px] h-[505px] bg-no-repeat"
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
