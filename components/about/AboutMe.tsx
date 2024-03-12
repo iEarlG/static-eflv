@@ -111,13 +111,17 @@ export const AboutMe = () => {
                     </div>
                     <div className="flex-1">
                         <Tabs defaultValue="personal">
-                            <TabsList>
-                                <TabsTrigger value="personal">Personal Info</TabsTrigger>
-                                <TabsTrigger value="qualifications">Qualification</TabsTrigger>
-                                <TabsTrigger value="skills">Skills</TabsTrigger>
+                            <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+                                <TabsTrigger value="personal" className="w-[162px] xl:w-auto">Personal Info</TabsTrigger>
+                                <TabsTrigger value="qualifications" className="w-[162px] xl:w-auto">Qualification</TabsTrigger>
+                                <TabsTrigger value="skills" className="w-[162px] xl:w-auto">Skills</TabsTrigger>
                             </TabsList>
                             <div className="text-lg mt-12 xl:mt-8">
-                                <TabsContent value="personal">Personal Info</TabsContent>
+                                <TabsContent value="personal">
+                                    <div>
+                                        <h1>League Esports Ambassador & Marshal </h1>
+                                    </div>
+                                </TabsContent>
                                 <TabsContent value="qualifications">qualifications</TabsContent>
                                 <TabsContent value="skills">skills</TabsContent>
                             </div>
