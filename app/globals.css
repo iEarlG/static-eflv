@@ -70,6 +70,10 @@ html, body,
   before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px]
 }
 
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
 .h2-header {
   @apply text-5xl xl:text-[69px] xl:leading-[79px] font-bold tracking-[-2px];
 }

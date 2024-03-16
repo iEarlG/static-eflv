@@ -119,7 +119,13 @@ export const AboutMe = () => {
                             <div className="text-lg mt-12 xl:mt-8">
                                 <TabsContent value="personal">
                                     <div>
-                                        <h1>League Esports Ambassador & Marshal </h1>
+                                        <h1 className="text-3xl font-bold mb-4">I'm EARL A. <span className="text-primary">VILLAPAZ</span>,</h1>
+                                        <p className="subtitle">I am League Esports enthusiast and Junior Web Developer. When I'm not cheering on the competition at NCGC Esports 
+                                            <span className="text-primary"> where I serve as both Ambassador & Marshal!</span>, I'm putting my web development skills to work, 
+                                            having <span className="text-primary">graduated with High Honors from STI College of Davao's MAWD program (Mobile Application & Web Development)</span>.
+                                            Beyond the digital world, I'm also <span className="text-primary">passionate about building PCs</span> from scratch and 
+                                            keeping them running smoothly with deep cleaning services.
+                                        </p>
                                     </div>
                                 </TabsContent>
                                 <TabsContent value="qualifications">qualifications</TabsContent>
