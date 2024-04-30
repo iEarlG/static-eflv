@@ -118,14 +118,24 @@ export const AboutMe = () => {
                             </TabsList>
                             <div className="text-lg mt-12 xl:mt-8">
                                 <TabsContent value="personal">
-                                    <div>
-                                        <h1 className="text-3xl font-bold mb-4">I'm EARL A. <span className="text-primary">VILLAPAZ</span>,</h1>
+                                    <div className="text-center xl:text-left mx-auto xl:mx-0">
+                                        <h1 className="text-3xl font-bold mb-4">I am EARL A. <span className="text-primary">VILLAPAZ</span>,</h1>
                                         <p className="subtitle">I am League Esports enthusiast and Junior Web Developer. When I'm not cheering on the competition at NCGC Esports 
                                             <span className="text-primary"> where I serve as both Ambassador & Marshal!</span>, I'm putting my web development skills to work, 
                                             having <span className="text-primary">graduated with High Honors from STI College of Davao's MAWD program (Mobile Application & Web Development)</span>.
                                             Beyond the digital world, I'm also <span className="text-primary">passionate about building PCs</span> from scratch and 
                                             keeping them running smoothly with deep cleaning services.
                                         </p>
+                                        <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                                            {infoDataMe.map((item, i) => {
+                                                return (
+                                                    <div key={i} className="flex items-center gap-x-4 mx-auto xl:mx-0">
+                                                        <div className="text-primary">{item.icon}</div>
+                                                        <div>{item.name}</div>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
                                     </div>
                                 </TabsContent>
                                 <TabsContent value="qualifications">qualifications</TabsContent>
