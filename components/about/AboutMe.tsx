@@ -1,6 +1,5 @@
 
-import Image from "next/image";
-import { GraduationCap, Mail, MapPin, Phone, User2, } from "lucide-react";
+import { Briefcase, GraduationCap, Mail, MapPin, Phone, User2, } from "lucide-react";
 import { SiDiscord, SiGithub, SiStackoverflow, SiVisualstudiocode, SiWindows10 } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -29,7 +28,7 @@ const infoDataMe = [
     },
 ];
 
-const qualiications = [
+const qualifications = [
     {
         title: "Education",
         data: [
@@ -95,9 +94,9 @@ const skills = [
 ];
 
 export const AboutMe = () => {
-    const getData = (arr: any, title: string) => {
-        return arr.find((item: any) => item.title === title)
-    }
+    const getData = (arr, title) => {
+        return arr.find((item) => item.title === title)
+    };    
     return (
         <section className="xl:h-[860px] pb-12 xl:py-24">
             <div className="container mx-auto">
@@ -138,7 +137,36 @@ export const AboutMe = () => {
                                         </div>
                                     </div>
                                 </TabsContent>
-                                <TabsContent value="qualifications">qualifications</TabsContent>
+                                <TabsContent value="qualifications">
+                                    <div>
+                                        <h2 className="text-3xl font-bold mb-8 text-center xl:text-left">My Journey</h2>
+                                        <div>
+                                            <div>
+                                                <div className="flex items-center gap-x-4 text-[18px]">
+                                                    <Briefcase className="text-primary" />
+                                                    <span className="capitalize font-medium">
+                                                        {getData(qualifications, "Experience").title}
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    {getData(qualifications, "Experience").data.map((item, i) => {
+                                                        const { company, position, year } = item;
+                                                        return (
+                                                            <div key={i}>
+                                                                <div>
+                                                                    <div>{company}</div>
+                                                                    <div>{position}</div>
+                                                                    <div>{year}</div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div>
+                                            </div>
+                                            <div>education</div>
+                                        </div>
+                                    </div>
+                                </TabsContent>
                                 <TabsContent value="skills">skills</TabsContent>
                             </div>
                         </Tabs>
