@@ -140,9 +140,9 @@ export const AboutMe = () => {
                                 <TabsContent value="qualifications">
                                     <div>
                                         <h2 className="text-3xl font-bold mb-8 text-center xl:text-left">My Journey</h2>
-                                        <div>
-                                            <div>
-                                                <div className="flex items-center gap-x-4 text-[18px] mb-2">
+                                        <div className="grid md:grid-cols-2 gap-y-8">
+                                            <div className="flex flex-col gap-y-6">
+                                                <div className="flex items-center gap-x-4 text-[18px]">
                                                     <Briefcase className="text-primary" />
                                                     <span className="capitalize font-medium">
                                                         {getData(qualifications, "Experience").title}
@@ -167,7 +167,33 @@ export const AboutMe = () => {
                                                     })}
                                                 </div>
                                             </div>
-                                            <div>education</div>
+                                            {/* EDUCATION */}
+                                            <div className="flex flex-col gap-y-6">
+                                                <div className="flex items-center gap-x-4 text-[18px]">
+                                                    <GraduationCap className="text-primary" />
+                                                    <span className="capitalize font-medium">
+                                                        {getData(qualifications, "Education").title}
+                                                    </span>
+                                                </div>
+                                                <div className="flex flex-col gap-y-8">
+                                                    {getData(qualifications, "Education").data.map((item, i) => {
+                                                        const { university, strand, year, } = item;
+                                                        return (
+                                                            <div key={i} className="flex gap-x-8 group">
+                                                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                                                    <div className="h-[11px] w-[11px] rounded-full bg-primary absolute -left-[5px] 
+                                                                    group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="font-semibold text-lg leading-none mb-2">{university}</div>
+                                                                    <div className="text-lg leading-none text-muted-foreground mb-4">{strand}</div>
+                                                                    <div className="text-base font-medium">{year}</div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    })}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </TabsContent>
