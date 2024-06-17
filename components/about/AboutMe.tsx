@@ -197,7 +197,11 @@ export const AboutMe = () => {
                                         </div>
                                     </div>
                                 </TabsContent>
-                                <TabsContent value="skills">skills</TabsContent>
+                                <TabsContent value="skills">
+                                    <div className="text-center xl:text-left">
+                                        <h3 className="text-3xl font-bold mb-8">Tools that I used everyday</h3>
+                                    </div>
+                                </TabsContent>
                             </div>
                         </Tabs>
                     </div>
